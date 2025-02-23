@@ -76,7 +76,7 @@ resource "aws_iam_policy" "lambda_cw" {
           "logs:PutLogEvents"
         ]
         Effect   = "Allow"
-        Resource = var.log_group
+        Resource = "${var.log_group}:*"
       }
     ]
   })
